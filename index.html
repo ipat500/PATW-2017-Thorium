@@ -1,205 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+    <title>Thorium - Re-imagining the nuclear dream</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css"-->
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-4x3.css">
 </head>
 <body class="shower list">
+    <header class="caption">
+        <h1>Thorium - Re-imagining the nuclear dream</h1>
+        <p>Ian Paterson</p>
+    </header>
+    <section class="slide" id="cover">
+        <h2>Thorium - Re-imagining the nuclear dream</h2>
+        <p>Presented by Ian Paterson</p>
+        <img src="pictures/FLiBe.jpg" alt="" class="cover">
+        <!--
+            To apply styles to the certain slides
+            set slide ID to get needed elements
+            -->
+        <style>
+            #cover h2 {
+                margin:30px 0 0;
+                color:#000;
+                text-align:center;
+                font-size:70px;
+                }
+            #cover p {
+                margin:10px 0 0;
+                text-align:center;
+                color:#000;
+                font-style:italic;
+                font-size:20px;
+                }
+            #cover p a {
+                color:#000;
+                }
+            #cover img {
+                margin-top: 15%;
+                }
+        </style>
+    </section>
+    <section class="slide" id="Contents">
+        <h2>Why LFTR? (Liquid Fluoride Thorium Reactor)</h2>
+        <ol>
+            <li>Review of traditional designs (PWR)</li>
+            <li>Advantages of molten salt coolant</li>
+            <li>Advantages of liquid fuel</li>
+            <li>Advantages of Thorium</li>
+            <li>Summary of advantages</li>
+            <li>Prior Art: Oak Ridge MRSE</li>
+        </ol>
+        <style>
+            #Contents li {
+                font-size: 30px;
+                }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>Nuclear Physics => Energy</h2>
+        <table style="margin-top: 12%;">
+        <td style="width: 48%; border-right:3px solid #000;height:50%">
+            <div style="padding-bottom: 10%;">Nuclear Fusion</div>
+            <img style="width: 95%;" src="pictures/nuclear-fusion.jpg" alt="">
+        <!-- https://nuclear-energy.net/what-is-nuclear-energy/nuclear-fusion -->
+        </td>
+        <td style="padding-left: 5%;">
+            <div style="padding-bottom: 8%;">Nuclear Fission</div>
+            <img style="width: 82%;" src="pictures/nuclear-fission.png" alt="">
+            <!-- https://nuclear-energy.net/what-is-nuclear-energy/nuclear-fission -->
+        </td>
+        </table>
+    </section>
+    <section class="slide" id="viable-fuels">
+        <h2>Viable Nuclear fuel options</h2>
+        <table>
+        <tr>
+            <th scope="col">Options:</th>
+            <th>What you Mine</th>
+            <th>Fissile Material (What you burn)</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td><p class="element">U235</p></td>
+            <td><p class="element">U235</p><p class="highlighted">&lt;- This is what we usually use</a></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td><p class="element">U238</p></td>
+            <td><p class="element">Pu239</p></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td><p class="element">Th232</p></td>
+            <td><p class="element">U233</p><p class="highlighted">&lt;- This is what we would like to use</a></td>
+        </tr>
+        </table>
+        <style>
+            #viable-fuels p.element {
+                font-size: 40px;
+                display: inline;
+                }
+            #viable-fuels p.highlighted {
+                color:#FF0000;
+                display: inline;
+                margin-left: 10%;
+                }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>Pressurized Water Reactors (PWR)</h2>
+        <img height=70% src="pictures/watts-bar-pwr-photo.jpg" alt=""><!-- http://www.power-eng.com/articles/2016/02/watts-bar-2-nuclear-project-costs-up-200-million.html -->
+        <p class="note">Watts Bar - Tennessee</p>
+    </section>
+    </section>
+    <section class="slide" id="PWR_summary">
+        <h2>Pressurized Water Reactors (PWR)</h2>
+        <ol>
+            <li>Uranium 235 Fuel</li>
+            <li>Water coolant</li>
+            <li>High Operating Pressure</li>
+            <li>Steam turbine (These are really big)</li>
+        </ol>
+        <img src="pictures/PressurizedWaterReactor.gif" alt=""> <!-- https://en.wikipedia.org/wiki/File:PressurizedWaterReactor.gif -->
+        <!--style>
+            #PWR_summary li {
+                font-size: 40px;
+                }
+        </style-->
+    </section>
+    <section class="slide">
+        <h2>PWR: Single piece core</h2>
+        <img src="pictures/AP1000-pressure-vessel.jpg" alt=""> <!-- https://atomicinsights.com/photos-of-sanmen-1-pressure-vessel-arrival/ -->
+        <p class="note">Reactor pressure vessel for AP1000</p>
+    </section>
+    <section class="slide">
+        <h2>PWR: Three Mile Island Meltdown</h2>
+        <img height=80% src="pictures/TMI-meltdown.jpg" alt=""> <!-- https://en.wikipedia.org/wiki/File:Graphic_TMI-2_Core_End-State_Configuration.png -->
+        <p style="display: inline;">6 = Previously molten material</p>
+    </section>
+    <section class="slide">
+        <h2>PWR: Fukushima Daiichi Hydrogen Explosion</h2>
+        <img height=75% src="pictures/fukushima-reactor-no-3-explosion.jpg" alt="">
+        <!-- https://liberalironist.wordpress.com/2011/03/17/meltdown-at-fukushima-i-nuclear-power-plant/ -->
+    </section>
+    <!--section class="slide">
+        <h2>Pressurized Water Reactors (PWR)</h2>
+        <img height=72% src="pictures/fukushima-daichi-evacuation-zone-2013.jpg" alt=""> <!-- http://fukushimaontheglobe.com/the-earthquake-and-the-nuclear-accident/evacuation-orders-and-restricted-areas ->
+        <p class="note">Fukushima Daichi evacuation zones still active in 2013</p>
+    </section-->
+    <section class="slide">
+        <h2>Pressurized Water Reactors (PWR)</h2>
+        <h2>Generation III+ designs promise safety improvements:</h2>
+        <ol>
+            <li>AP1000 (Westinghouse)</li>
+            <li>EPR (Areva)</li>
+            <li>ATMEA1 (Areva/Mitsubishi)</li>
+        </ol>
+        <p style="display: inline">Additional information: </p><a class="note" href="http://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/advanced-nuclear-power-reactors.aspx#ECSArticleLink2">Full list of III+ Gen designs</a>
+    </section>
+    <section class="slide" id="molten-salt-coolant">
+        <h2>LFTR Advantages: Molten Salt Coolant</h2>
+        <ol>
+            <li>Reactor runs at atmospheric pressure</li>
+            <li>Fluorides (FLiBe or FLiNaK) are chemically stable</li>
+            <li>Dangerous fission products (e.g. Iodine-131 and Cesium-137) can't escape as gases</li>
+            <li>Wide safe temperature range:
+                <ul>
+                    <li>Melting point: 459°C</li>
+                    <li>Boiling point: 1430°C</li>
+                </ul>
+            </li>
+            <li>Side benefits of high output temperature (700°C)
+                <ul>
+                    <li>Closed cycle gas turbine</li>
+                    <li>Desalinating water</li>
+                </ul>
+            </li>
+        </ol>
+        <img height="40%" src="pictures/FLiBe.jpg" alt="" style="margin-top: -40%; margin-left: 70%;"> <!-- https://en.wikipedia.org/wiki/File:FLiBe.png -->
+        <style>
+            #molten-salt-coolant li {
+                font-size: 25px;
+                }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>Solid Fuel Disadvantages</h2>
+        <ol>
+            <li>Expensive fabrication</li>
+            <li>Fuel must be shuffled around the reactor</li>
+            <li>Inefficient fuel burn-up</li>
+        </ol>
+        <img height=30% src="pictures/TRISO.jpg" alt=""> <!-- https://atomicinsights.com/advances-high-temperature-nuclear-reactor-fuel-triso-integrity-1800-c/ -->
+        <img height=30% src="pictures/uranium-glove.jpg" alt="">
+        <!-- https://businesstech.co.za/news/energy/89080/the-evolution-of-nuclear-technology/ -->
+        <img height=30% src="pictures/cracking-MOX-24hours.jpg" alt="">
+        <!-- http://jolisfukyu.tokai-sc.jaea.go.jp/fukyu/mirai-en/2009/1_3.html -->
+    </section>
+    <section class="slide">
+        <h2>LFTR Advantages: Liquid Fuel</h2>
+        <ol>
+            <li>Chemical processing (e.g. Uranium extraction via Fluorination)</li>
+            <li>Efficient fuel burn</li>
+            <li>Homogeneity</li>
+            <li>Removal of neutron poisons (e.g. Xenon)</li>
+            <li>Useful fission products can be extracted for other uses</li>
+            <li>Freeze plug and drain tank</li>
+        </ol>
+    </section>
+    <section class="slide">
+        <img width=100% src="pictures/drain-tank.jpg" alt="">
+        <!-- http://flibe-energy.com/technology/liquid-fluoride-reactors/ -->
+    </section>
+    <section class="slide">
+        <h2>LFTR Advantages: Thorium</h2>
+        <ol>
+            <li>Abundant</li>
+            <li>Waste product from Rare Earth Mining</li>
+            <li>Isotopic enrichment is not necessary</li>
+            <li>Non-proliferating</li>
+            <p style="margin-top: 10%">Th-232 + neutron => Pa-233 => 27 days => U-233</p>
+            <p style="margin-top: 5%">U-233 + neutron => Fission products + Energy + more neutrons</p>
+        </ol>
+    </section>
+    <section class="slide">
+        <img width=90% src="pictures/lftr-block-diagram.jpg" alt="">
+        <!-- http://flibe-energy.com/technology/liquid-fluoride-reactors/ -->
+    </section>
+    <section class="slide">
+        <h2>LFTR Advantages: Summary</h2>
+        <ol>
+            <li>Improved safety</li>
+            <li>Non-proliferating fuel cycle</li>
+            <li>Small modular design - Can be produced in a factory</li>
+            <li>Efficient fuel utilization</li>
+            <li>Cheap abundant Thorium fuel</li>
+            <li>Minimal nuclear waste production</li>
+            <li>Existing nuclear waste recycling (debatable)</li>
+        </ol>
+    </section>
+    <section class="slide">
+        <img height="65%" style="margin-top: 5%" src="pictures/MSRE_startup_U233.jpg" alt="">
+        <!-- https://www.flickr.com/photos/doe-oakridge/14480987473/ -->
 
-	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
-	</header>
-
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
-	</section>
-
-	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-
-	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</footer>
-
-	<div class="progress"></div>
-
-	<script src="node_modules/shower-core/shower.min.js"></script>
-	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
-
+        <img height="65%" src="pictures/MSRE_core.jpg" alt="">
+        <!-- https://en.wikipedia.org/wiki/File:MSRE_Core.JPG -->
+    </section>
+    <section class="slide">
+        <h2>Oak Ridge National Laboratories Molten Salt Reactor Experiment (MSRE)</h2>
+        <ol>
+            <li>Powered on during 1965 - 1969</li>
+            <li>Successfully demonstrated working with Flouride based Nuclear Fuel salts</li>
+            <li>Successfully demonstrated the passive safety systems</li>
+            <li>U-235 operation: 9005 hours</li>
+            <li>U-233 operation: 4,167 hours (part of the Thorium cycle)</li>
+            <li>Further information on MSRE is available in scanned documents from the project: <a href="http://energyfromthorium.com/pdf/">MSRE document archive</a></li>
+        </ol>
+    </section>
+    <section class="slide">
+        <img height="40%" src="pictures/nuclear_free.jpg" alt=""> <!-- https://nzhistory.govt.nz/media/photo/anti-nuclear-protesters-wellington -->
+        <img height="40%" src="pictures/nuclear_free_badges.jpg" alt=""> <!-- https://nzhistory.govt.nz/media/photo/nuclear-free-badges -->
+        <img height="40%" src="pictures/rainbow_warrior.jpg" alt=""> <!-- http://www.greenpeace.org/international/en/about/history/the-bombing-of-the-rainbow-war/ -->
+        <img height="40%" src="pictures/I_can_smell_the_uranium.jpg" alt=""> <!-- https://nzhistory.govt.nz/media/sound/oxford-union-debate -->
+    </section>
+    <section class="slide">
+    <h2>Special thanks to:</h2>
+    <ul>
+    <li>Kirk Sorensen of Flibe Energy for digitizing the remaining MSRE documents and brining awareness of this technology to a wider audience.</li>
+    <li>Gordon McDowell for his YouTube series and extensive research: <a href="https://www.youtube.com/user/gordonmcdowell">youtube.com/user/gordonmcdowell</a></li>
+    </ul>
+    <img height="40%" src="pictures/FLiBe.jpg" alt=""> <!-- https://en.wikipedia.org/wiki/File:FLiBe.png -->
+    </section>
+    <section class="slide" id="questions">
+        <p>Questions?<p>
+        <style>
+            #questions p {
+                font-size: 80px;
+                }
+        </style>
+    </section>
+    <section class="slide">
+        <a href="pictures/thermal_vs_fast.jpg">
+        <img width="100%" src="pictures/thermal_vs_fast.jpg" alt=""></a>
+        <a href="https://www.youtube.com/watch?v=Ct5mO_jH32g">Explanation video</a>
+    </section>
+    <section class="slide">
+        <h2>Possible Reasons LFTR hasn't been adopted yet</h2>
+        <ul>
+            <li>US Navy did early mover costs for PWR</li>
+            <li>MSRE was abandoned before safety was a primary concern (Before 3 Mile Island, Chernobyl etc.)</li>
+            <li>Industry and Political Inertia</li>
+            <li>Incumbents have very little incentive to innovate</li>
+            <li>Razor blade model</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Who's working on this now?</h2>
+        <ul>
+            <li>TerrestrialEnergy - Factory produced reactors shipped to site</li>
+            <li>Flibe Energy - modular reactors designs</li>
+            <li>Thorcon - ship based reactors</li>
+            <li>Shanghai Institute of Applied Physics, Chinese Academy of Sciences</li>
+            <li>Transatomic Power (only MSR not Thorium)</li>
+            <li>India have expressed interest in replacing fast breeder programs with MSR</li>
+            <li>Lots of new work being done on molten salt cooled reactor designs (e.g. pebble based) - transferable knowledge</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Potential Issues?</h2>
+        <ul>
+            <li>Materials must withstand corrosive salt environment</li>
+            <li>Materials must withstand embrittlement due to neutrons</li>
+            <li>Tritium problem</li>
+            <li>System maintenance (salt pumps etc.)</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <img height="90%" src="http://energyfromthorium.com/wp-content/uploads/2015/06/ORNL4528-reactor-cutaway.jpg" alt="">
+        <a href="http://energyfromthorium.com/history/msbr-design-two-fluid-core/">Two Fluid Design</a>
+    </section>
+    <section class="slide" id="fourth_gen">
+        <h2>IVth Gen Designs</h2>
+        <a href="pictures/reactors/SWCR.svg.png">
+        <img width="30%" src="pictures/reactors/SWCR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Supercritical-Water-Cooled_Reactor.svg -->
+        <a href="pictures/reactors/GCFR.svg.png">
+        <img width="30%" src="pictures/reactors/GCFR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Gas-Cooled_Fast_Reactor_Schemata.svg -->
+        <a href="pictures/reactors/LCFR.svg.png">
+        <img width="30%" src="pictures/reactors/LCFR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Lead-Cooled_Fast_Reactor_Schemata.svg -->
+        <a href="pictures/reactors/VHTR.svg.png">
+        <img width="30%" src="pictures/reactors/VHTR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Very_High_Temperature_Reactor.svg -->
+        <a href="pictures/reactors/MSR.svg.png">
+        <img width="30%" src="pictures/reactors/MSR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Molten_Salt_Reactor.svg -->
+        <a href="pictures/reactors/SCFR.svg.png">
+        <img width="30%" src="pictures/reactors/SCFR.svg.png" alt=""></a> <!-- https://en.wikipedia.org/wiki/File:Sodium-Cooled_Fast_Reactor_Schemata.svg -->
+        
+        <!-- https://web.archive.org/web/20130120130033/http://www.ne.doe.gov/genIV/documents/gen_iv_roadmap.pdf -->
+        <style>
+            #fourth_gen h2 {
+                font-size: 30px;
+                }
+        </style>
+    </section>
+    <p class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </p>
+    <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
